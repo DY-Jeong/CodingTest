@@ -48,12 +48,42 @@
 
 
 #include<iostream>
-
+#include<vector>
+#include<string>
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
+	string str;
+	vector<string> input;
+	vector<string> regionlist;
+	vector<string> testregionlist;
+	while(getline(cin, str,char(20)))
+	{
+		input.push_back(str);
+	}
+	int region = stoi(input[0]);
+	int testregion = stoi(input[1]);
+	input.clear();
+	for(int i=0; i<region;i++)
+	{
+		while(getline(cin, str,char(20)))
+		{
+			input.push_back(str);
+		}
+	}
+
+	input.clear();
+	for(int i=0; i<testregion;i++)
+	{
+		while(getline(cin, str,char(20)))
+		{
+			input.push_back(str);
+		}
+	}
+
+	
 
 	return 0;
 }
