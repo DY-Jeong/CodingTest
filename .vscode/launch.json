@@ -2,14 +2,35 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "g++.exe - 활성 파일 빌드 및 디버그",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+      "setupCommands": [
+        {
+          "description": "gdb에 자동 서식 지정 사용",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "g++ build"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "d:/OneDrive - 충남대학교/문서/Visual Studio 2019/repos/CodingTest/Softeer",
+      "cwd": "d:/OneDrive - 충남대학교/문서/Visual Studio 2019/repos/CodingTest",
       "environment": [],
-      "program": "d:/OneDrive - 충남대학교/문서/Visual Studio 2019/repos/CodingTest/Softeer/build/Debug/outDebug",
+      "program": "d:/OneDrive - 충남대학교/문서/Visual Studio 2019/repos/CodingTest/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
