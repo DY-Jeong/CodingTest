@@ -59,6 +59,8 @@ int main(int argc, char** argv)
 	vector<string> input;
 	vector<string> regionlist;
 	vector<string> testregionlist;
+	cin >> str;
+
 	while(getline(cin, str,char(20)))
 	{
 		input.push_back(str);
@@ -66,6 +68,7 @@ int main(int argc, char** argv)
 	int region = stoi(input[0]);
 	int testregion = stoi(input[1]);
 	input.clear();
+	cin.ignore();
 	for(int i=0; i<region;i++)
 	{
 		while(getline(cin, str,char(20)))

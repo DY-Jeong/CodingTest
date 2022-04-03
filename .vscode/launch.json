@@ -12,7 +12,7 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+      "miDebuggerPath": "C:\\minGW\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "gdb에 자동 서식 지정 사용",
