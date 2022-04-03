@@ -2,8 +2,8 @@
 
 int main()
 {
-   int h,m,s;
-   scanf("%d:%d:%d",&h, &m, &s);
-   printf("%d",m);
+   int y,m,d;
+   scanf("%d.%d.%d",&y, &m, &d);
+   printf("%02d-%02d-%04d",d, m, y);
 }
 
