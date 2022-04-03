@@ -59,32 +59,33 @@ int main(int argc, char** argv)
 	vector<string> input;
 	vector<string> regionlist;
 	vector<string> testregionlist;
-	cin >> str;
+	//char a[10];
+	
 
-	while(getline(cin, str,char(20)))
+	while(getline(cin, str,char(32)))
 	{
 		input.push_back(str);
 	}
 	int region = stoi(input[0]);
 	int testregion = stoi(input[1]);
-	input.clear();
-	cin.ignore();
-	for(int i=0; i<region;i++)
-	{
-		while(getline(cin, str,char(20)))
-		{
-			input.push_back(str);
-		}
-	}
+	// input.clear();
+	// cin.ignore();
+	// for(int i=0; i<region;i++)
+	// {
+	// 	while(getline(cin, str,' '))
+	// 	{
+	// 		input.push_back(str);
+	// 	}
+	// }
 
-	input.clear();
-	for(int i=0; i<testregion;i++)
-	{
-		while(getline(cin, str,char(20)))
-		{
-			input.push_back(str);
-		}
-	}
+	// input.clear();
+	// for(int i=0; i<testregion;i++)
+	// {
+	// 	while(getline(cin, str,char(20)))
+	// 	{
+	// 		input.push_back(str);
+	// 	}
+	// }
 
 	
 

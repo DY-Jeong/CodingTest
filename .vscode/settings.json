@@ -29,5 +29,9 @@
     "**/.vscode/**"
   ],
   "C_Cpp_Runner.cCompilerPath": "C:/msys64/mingw64/bin/gcc.exe",
-  "terminal.explorerKind": "external"
+  "terminal.explorerKind": "external",
+  "files.associations": {
+    "*.tcc": "cpp",
+    "iostream": "cpp"
+  }
 }
