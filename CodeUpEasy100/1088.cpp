@@ -2,15 +2,15 @@
 
 int main()
 {//return으로 함수를 종료시키자!
-  int a, sum, b;
-  sum=0;
+  int a;
   scanf("%d", &a);
-  for(int i=0; a>sum; i++)
+  for(int i=0; a>=i; i++)
   {
-    sum +=i;
-    b = i;    
+    if((i%3)==0)
+    {
+      continue;
+    }
+    printf("%d\n",i);
   }
-  printf("%d\n",b);
-  
   return 0;
 }
