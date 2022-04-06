@@ -60,14 +60,8 @@ int main(int argc, char** argv)
 	vector<string> regionlist;
 	vector<string> testregionlist;
 	//char a[10];
-	
+	sscanf();
 
-	while(getline(cin, str,char(32)))
-	{
-		input.push_back(str);
-	}
-	int region = stoi(input[0]);
-	int testregion = stoi(input[1]);
 	// input.clear();
 	// cin.ignore();
 	// for(int i=0; i<region;i++)
