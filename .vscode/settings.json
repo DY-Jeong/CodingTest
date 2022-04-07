@@ -32,6 +32,7 @@
   "terminal.explorerKind": "external",
   "files.associations": {
     "*.tcc": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "cmath": "cpp"
   }
 }
