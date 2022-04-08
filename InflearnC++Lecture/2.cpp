@@ -20,4 +20,4 @@ int main()
     }
     printf("= %d", sum);//작은따옴표 안됨
     return 0;
-}3 
+}

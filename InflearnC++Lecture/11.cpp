@@ -9,7 +9,7 @@ int main()
     for(i=1; i<=n; i++)
     { 
         res=i;
-        while (res>0)
+        while (res> 0)
         {
             tmp=res%10;
             a[tmp]++;
