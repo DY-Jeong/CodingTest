@@ -17,7 +17,7 @@ int a1[11][7]={
 int main(int argc, char** argv)
 {
 	int cs, a, b, cnt,div=10;
-	int arra[1000]={}, arrb[1000]={},next[5]={10, 10, 10, 10, 10}, now[5]={10, 10, 10, 10, 10};
+	int arra[1000]={}, arrb[1000]={};
 	scanf("%d", &cs);
 	for(int i=0; i<cs; i++)
 	{
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 		cnt=0;
 		int numA = arra[i];
 		int numB = arrb[i];
-		
+		int next[5]={10, 10, 10, 10, 10}, now[5]={10, 10, 10, 10, 10};
 		for(int j=4;numA>0; j--)
 		{
 			now[j]=numA%div;
@@ -41,18 +41,13 @@ int main(int argc, char** argv)
 		}
 		for(int j=0; j<5; j++)
 		{
-			printf("Now (%d) : %d \n",j, now[j]);
-			printf("next (%d) : %d \n",j, next[j]);
 			for(int k=0; k<7; k++)
 			{
 				int sw = a1[now[j]][k]-a1[next[j]][k];
-				//printf("sw : %d\n", sw);
 				if(sw!=0) cnt++;
-				//printf("%d\n", cnt);
 			}
 		}
 		printf("%d\n", cnt);
 	}
-	
 	return 0;
 }
