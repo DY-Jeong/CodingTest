@@ -13,9 +13,9 @@ int main(int argc, char** argv)
 		if(char('A')<=a[i]&&a[i]<=char('Z')) printf("%c", a[i]);
 	}
 	queue<int> A, B, C, D;
-	
+	A.front();
+	min(1, 2, 3);
 
-
-	printf("\n%d", (int)(pow(2,31)-1));
+	printf("\n%d", A.front());
 	return 0;
 }
