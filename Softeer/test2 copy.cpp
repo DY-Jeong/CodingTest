@@ -19,10 +19,10 @@ struct PFC
 
 int main(int argc, char** argv)
 {
-	char alpha[100]={}, key[101], message[1001];
+	char alpha[100]={}, key[101], message[1001], tc[2];
 	int i, j, k;
 	vector<PFC> keymap;
-	queue<char> keylist;
+	queue<char> keylist, messageque, cipherque;
 	scanf("%s", &message);
 	scanf("%s", &key);
 	for(i=0; key[i]!=0; i++)
@@ -49,6 +49,37 @@ int main(int argc, char** argv)
 			keymap.push_back(PFC(keylist.front(), i, j));
 			keylist.pop();
 		}
+	}
+	i=0;
+	while(message[i]!='0')
+	{
+		messageque.push(message[i]);
+		i++;
+	}
+	i=0;
+	while(!messageque.empty())
+	{
+		tc[0]=messageque.front();
+		messageque.pop();
+		if(messageque.empty())
+		{
+			tc[1]='X';
+		}
+		else if(tc[0]==messageque.front())
+		{
+			if(tc[0]=='X')
+			{
+				tc[1]='Q';
+			}
+			else tc[1]='X';
+		}
+		else
+		{
+			tc[1]=messageque.front();
+			messageque.pop();
+		}
+		cipherque.push(tc[0]);
+		cipherque.push(tc[1]);
 	}
 	
 

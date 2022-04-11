@@ -60,12 +60,56 @@
 // 0
 // 두 조작에 겹치는 것이 하나도 없으므로 답은 0이다.
 #include<iostream>
-
+#include<vector>
+#include<queue>
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
+	int tmp,i,j,m, n, k, cnt=0, max=0;
+	scanf("%d %d %d", &m, &n, &k);
+	vector<int> arr1(0);
+	vector<int> arr2(0);
+	vector<int> arr3(0);
+	for(i=0; i<m; i++)
+	{
+		scanf("%d", &tmp);
+		arr1.push_back(tmp);
+	}
+	for(i=0; i<n; i++)
+	{
+		scanf("%d", &tmp);
+		arr2.push_back(tmp);
+	}
+	if(arr1.size()>arr2.size())arr1.swap(arr2);//arr1이 무조건 작은거
+	int loop = arr1.size()+arr2.size()-1;
 
+	for(i=0; i<arr1.size(); i++)
+	{
+		arr2.insert(arr2.begin(), 0);
+		arr2.insert(arr2.end(), 0);
+	}
+	for(j=0; j<loop; j++)//sliding window로 같은 값 훑어보기
+	{
+		for(i=0; i<arr1.size();i++)
+		{
+			if(arr1[i]==arr2[i]) arr3.push_back(1);
+			else{arr3.push_back(-1);}
+		}
+		arr2.erase(arr2.begin());
+		while(!arr3.empty())
+		{
+			if(arr3.back()==1)cnt++;
+			else// if(arr3.back()==-1)
+			{
+				if(cnt>max)max=cnt;
+				cnt=0;
+			}
+			arr3.pop_back();
+		}
+	}
+	printf("%d", max);
+	
 	return 0;
 }

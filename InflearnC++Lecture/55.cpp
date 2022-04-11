@@ -6,7 +6,7 @@ using namespace std;
 //Stack 
 int main()
 {
-    int n, i,k,j, tmp;
+    int n, i,k,j;
     scanf("%d", &n);
     stack<int> jc;
     int a[32]={};
@@ -22,7 +22,7 @@ int main()
         {
             jc.push(a[k++]);
             b[j++]='P';
-            if(k>65)
+            if(k>(n*2+1))
             {
                 printf("impossible");
                 return 0;

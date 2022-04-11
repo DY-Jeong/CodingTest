@@ -34,6 +34,13 @@
     "*.tcc": "cpp",
     "iostream": "cpp",
     "cmath": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "stack": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp"
   }
 }

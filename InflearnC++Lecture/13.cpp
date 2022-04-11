@@ -6,7 +6,6 @@ int main() //int 자료형의 범위는 2,147,483,647이고 long long 해도 18�
     char a[101]={};
     int b[10]={};
     int n;
-    
     scanf("%s", &a[i]);
     for(i=0; i<100; i++)
     {
