@@ -3,11 +3,12 @@
 #include<algorithm>
 #include<queue>
 using namespace std;
-
+//플로이드 워샬 알고리즘
 int main(int argc, char** argv)
 {
 	int n, a, b, c, sum;
 	scanf("%d", &n);
+	
 	vector<vector<int> > dist(n+1, vector<int>(n+1, 214700000));
 	for(int i=1; i<=n; i++)dist[i][i]=0;
 	for(int i=1; i<n; i++)
