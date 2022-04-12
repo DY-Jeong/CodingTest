@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 {
 	int n, a, b, c, sum;
 	scanf("%d", &n);
-	
+	//vector<pair<노드,비용> > map(노드수)하고 나서 vector[출발노드].push_back(갈 노드, 비용))해라
 	vector<vector<int> > dist(n+1, vector<int>(n+1, 214700000));
 	for(int i=1; i<=n; i++)dist[i][i]=0;
 	for(int i=1; i<n; i++)

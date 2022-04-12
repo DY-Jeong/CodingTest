@@ -6,7 +6,6 @@ int s[10]={}, ch[10]={};
 int Send()
 {
     return s[0]*1000+s[2]*100+s[3]*10+s[4];
-
 }
 int More()
 {

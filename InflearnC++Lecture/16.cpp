@@ -8,7 +8,7 @@ int main()
     scanf("%s", &a);
     for(int i=0; i<100; i++)
     {
-        if(a[i]>0) b[a[i]-char('A')]++; //문자열 공백은 0이 들어가있다!!!!
+        if(a[i]>0) b[a[i]-char('A')]++; //문자열 공백은 \0이 들어가있다!!!!
     }
     scanf("%s", &a);
     for(int i=0; i<100; i++)
