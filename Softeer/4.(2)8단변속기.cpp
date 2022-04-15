@@ -21,5 +21,6 @@ using namespace std;
 int main(int argc, char** argv)
 {
 
+lkokmnoi[pmop]
 	return 0;
 }
