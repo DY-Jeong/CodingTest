@@ -41,7 +41,7 @@
 
 // **출력예제2**
 
-
+//1
 #include <iostream>
 #include <algorithm>
 #include <vector>
