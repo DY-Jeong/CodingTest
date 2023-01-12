@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "g++.exe - 활성 파일 빌드 및 디버그",
+      "name": "g++ 빌드 및 디버그",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -28,13 +28,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "d:/OneDrive - 충남대학교/문서/Visual Studio 2019/repos/CodingTest",
-      "environment": [],
-      "program": "d:/OneDrive - 충남대학교/문서/Visual Studio 2019/repos/CodingTest/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
+      "externalConsole": true,
+      "cwd": "c:/Users/hchun/source/CodingTest",
+      "program": "c:/Users/hchun/source/CodingTest/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
-      "externalConsole": false,
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

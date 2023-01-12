@@ -60,7 +60,7 @@ int main(int argc, char** argv)
 	vector<string> regionlist;
 	vector<string> testregionlist;
 	//char a[10];
-	sscanf();
+	scanf();
 
 	// input.clear();
 	// cin.ignore();
