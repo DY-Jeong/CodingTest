@@ -1,17 +1,16 @@
-# include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main()
 {
-    int n, m, i, sum=0;
-    std::cin>>n>>m;//(::는 범위지정 연산자)
-    for(i=1; i<=n; i++)
+    int m, n, res=0, tmp;
+    cin>>n>>m;
+    for(int i=1;i<n;i++)
     {
-        if(i%m==0)
-        {
-            sum+=i;
-        }
+        tmp = m*i;
+        if(tmp>n) break;
+        res+=tmp;
     }
-    std::cout<<sum;
-    return 0;
-
+    cout<<res;
 }

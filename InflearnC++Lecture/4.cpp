@@ -1,18 +1,20 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
 
 int main()
 {
-    int n,i,max=0,min=9999999;
-    int a;
-    scanf("%d", &n);
-    for(i=0; i<n; i++)
+    int n, res;
+    cin>>n;
+    vector<int> a(n, 0);
+    for(int i=0; i<n; i++)
     {
-        scanf("%d", &a);
-        if(max<a){max = a;}
-        if(min>=a){min = a;}
+        cin>>a[i];
     }
-    printf("%d", max-min);
+    sort(a.begin(), a.end());
+    res = a[n-1]-a[0];
+    cout<<res;
     return 0;
 
-    
 }

@@ -1,23 +1,17 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main()
 {
-    int a, b,i, sum=0;
-    scanf("%d %d", &a, &b);
-    for(i=a; a<=i&&i<=b; i++)
+    int a, b, res, i;
+    cin>>a>>b;
+    i=b-a;
+    for(int j=0; j<i;j++)
     {
-        if(i==b)
-        {
-            printf("%d ", i);
-            sum+=i;
-        }
-        else
-        {
-            printf("%d + ", i);
-            sum+=i;
-        }
-        
+        cout<<a+j<<" + ";     
+        res+=a+j;   
     }
-    printf("= %d", sum);//작은따옴표 안됨
-    return 0;
+    res+=b;
+    cout<<b<<" = "<<res;
 }

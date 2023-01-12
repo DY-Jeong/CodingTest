@@ -1,27 +1,28 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
+using namespace std;
+//0으로 나누는 일이 없도록 해야함.
 int main()
 {
-    int a,i, sum=0;
-    scanf("%d", &a);
-    for(i=1; i<a; i++)
+    int n,tmpN, sum=0;
+    cin>>n;
+    tmpN = n/2;
+    for(int i=1; i<=tmpN; i++)
     {
-        if(a%i==0)
-        {
-            if(a/i==2)
+        if(n%i==0)
+        {            
+            if(tmpN==i)
             {
-                printf("%d = ", i);
-                sum +=i;
+                sum+=i;
+                cout<<i<<" = "<<sum;
             }
             else
             {
-                printf("%d + ", i);
-                sum +=i;
+                cout<<i<<" + ";
+                sum+=i;
             }
+            
         }
     }
-    printf("%d", sum);
     return 0;
-
-    
 }
