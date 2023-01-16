@@ -2,11 +2,11 @@
 
 using namespace std;
 
-//마지막 문제있음
+//For 한번에 안될거같으면 2번해
 
 int main()
 {
-    int a,i,t,max=0,maxpos=0, arr[100]={},arr2[100]={}, cnt[100]={};
+    int a,i,t,max1=0,max2=0,maxpos=0, arr[100]={},arr2[100]={}, cnt[100]={};
     cin>>a;
     for(i=0; i<a; i++)
     {
@@ -22,14 +22,21 @@ int main()
             arr[i]=arr[i]/10;
         }
     }
-    for(i=1;i<a;i++)
+    for(i=0;i<a;i++)
     {
-        if(max<cnt[i]&&arr2[maxpos]<arr2[i])
+        if(cnt[i]>max1)
         {
-            max=cnt[i];
             maxpos=i;
+            max1=cnt[i];
         }
     }
-    cout<<arr2[maxpos];
+    for(i=0; i<a; i++)
+    {
+        if(cnt[i]==max1)
+        {
+            if(arr2[i]>max2)max2=arr2[i];
+        }
+    }
+    cout<<max2;
     return 0;
 }
