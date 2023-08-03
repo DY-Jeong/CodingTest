@@ -12,7 +12,7 @@ int main()
         _map[a].push_back(b);
         _map[b].push_back(a);
 
-    }
+    } 
     Q[++b]=1;
     ch[1]=1;
     while(f<b)
