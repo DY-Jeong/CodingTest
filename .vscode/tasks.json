@@ -1,4 +1,6 @@
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "runner": "terminal",
     "tasks": [
@@ -12,9 +14,7 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": "build"
         },
         {
@@ -23,13 +23,11 @@
             "command": "gcc",
             "args": [
                 "-g",
-                "${fileDirname}\\**.cpp",
+                "${fileDirname}\\${fileBasenameNoExtension}.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": "build"
         },
         {
@@ -37,32 +35,8 @@
             "command": "cmd",
             "group": "test",
             "args": [
-                "/C",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "/C", "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ]
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: cpp.exe 활성 파일 빌드",
-            "command": "C:\\minGW\\bin\\cpp.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "디버거에서 생성된 작업입니다."
         }
     ]
 }
