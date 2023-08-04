@@ -41,7 +41,8 @@
     "string": "cpp",
     "unordered_map": "cpp",
     "string_view": "cpp",
-    "initializer_list": "cpp"
+    "initializer_list": "cpp",
+    "ostream": "cpp"
   },
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
