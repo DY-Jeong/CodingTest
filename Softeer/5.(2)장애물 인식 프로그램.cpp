@@ -65,17 +65,21 @@ void dfs(int r, int c)
  
 int main()
 {
-    int res=0, value;
+    int res=0;
     cin >> N;
-    
-	for(int i=1; i<n+1; i++)
-	{
-		for(int j=1; j<n+1; j++)
-		{
-			scanf("%1d", &val);
-			maps[i][j]=val;
-		}
-	}
+    string str;
+    for(int i = 0; i<N; i++){
+        cin >> str;
+        for(int j = 0; j<str.length(); j++)
+		{            
+            visited[i][j] = 0;
+            if(str[j] == '1')
+			{
+                maps[i][j] = 1;
+            }
+            else maps[i][j] = 0;
+        }
+    }
     
     for(int i = 0; i<N; i++)
 	{
