@@ -1,32 +1,26 @@
 #include <string>
 #include <vector>
-#define MAX_char 20
-#define MAX_Table 100000
-
-typedef long long ll;
+#include <unordered_map>
 
 using namespace std;
 
-string solution(vector<string> participant, vector<string> completion)
-{
-    typedef struct Hash
-    {
-        char key[MAX_char+1];
-        char* data;
-        
-    }
-    Hash;
-    Hash table[MAX_Table];
+string solution(vector<string> participant, vector<string> completion) {
 
-    long hashGen(char key[]) 
-    {
-        long h = 5381;
-        while (*key != '\0')
-            h = (((h << 5) + h) + *key++) % MAX_TABLE;
-        return h;
+    unordered_map<string, int> nameCount;
+
+    for (auto &p : participant) {
+        nameCount[p]++;
     }
-    
-    
-    string answer = "";
-    return answer;
+
+    for (auto &c : completion) {
+        nameCount[c]--;
+    }
+
+    for (auto &entry : nameCount) {
+        if (entry.second > 0) {
+            return entry.first; //완주못한 사람의 이름을 반환
+        }
+    }
+
+    return "";
 }
