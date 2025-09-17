@@ -48,12 +48,40 @@
 
 
 #include<iostream>
-
+#include<vector>
+#include<string>
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
+	string str;
+	vector<string> input;
+	vector<string> regionlist;
+	vector<string> testregionlist;
+	//char a[10];
+	scanf();
+
+	// input.clear();
+	// cin.ignore();
+	// for(int i=0; i<region;i++)
+	// {
+	// 	while(getline(cin, str,' '))
+	// 	{
+	// 		input.push_back(str);
+	// 	}
+	// }
+
+	// input.clear();
+	// for(int i=0; i<testregion;i++)
+	// {
+	// 	while(getline(cin, str,char(20)))
+	// 	{
+	// 		input.push_back(str);
+	// 	}
+	// }
+
+	
 
 	return 0;
 }

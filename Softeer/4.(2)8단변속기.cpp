@@ -13,13 +13,41 @@
 // 12345678
 // 출력예제
 // ascending
-#include<iostream>
-
-
+#include<bits/stdc++.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-
+	int tmp, isascending=false, ismixed=false, isdescending=false, k;
+	int trans[8]={};
+	for(int i=0; i<8; i++)
+	{
+		scanf("%d", &tmp);
+		trans[i]=tmp;
+	}
+	for(int i=0; i<8; i++)
+	{
+		if(i+1!=trans[i])
+		{
+			isascending=false;
+			break;
+		}
+		else if(i+1==trans[i]) isascending=true;
+	}
+	k=8;
+	for(int i=0; i<8; i++)
+	{
+		if(k!=trans[i])
+		{
+			isdescending=false;
+			break;
+		}
+		else if(k==trans[i]) isdescending=true;
+		k--;
+	}
+	if((isascending==false)&&(isdescending==false)) ismixed=true;
+	if(isascending) printf("ascending");
+	else if(isdescending) printf("descending");
+	else printf("mixed");
 	return 0;
 }

@@ -19,12 +19,43 @@
 // 170
 
 #include<iostream>
-
+#include<algorithm>
+#include<vector>
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
-
-	return 0;
+	int w, n, m, p, cnt=0;
+	cin>>w>>n;
+	vector<vector<int> > a(n, vector<int>(2, 0));
+	for(int i=0; i<n; i++)
+	{
+		cin>>m>>p;
+		a[i][1]=m;//보석무게
+		a[i][0]=p;//보석값
+	}
+	sort(a.rbegin(), a.rend());
+	
+	for(auto c : a)
+	{
+		if((w-c[1])>0)
+		{
+			w-=c[1];
+			cnt+=c[1]*c[0];
+		}
+		else if((w-c[1])<0)
+		{
+			cnt+=w*c[0];
+			cout<<cnt;
+			return 0;
+		}
+		else
+		{
+			cnt+=c[1]*c[0];
+			cout<<cnt;
+			return 0;
+		}
+	}
+	
 }

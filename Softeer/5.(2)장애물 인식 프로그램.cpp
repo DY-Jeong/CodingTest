@@ -33,13 +33,75 @@
 // 8
 // 9
 
-#include<iostream>
-
+#include<bits/stdc++.h>
 
 using namespace std;
 
-int main(int argc, char** argv)
-{
+int maps[25][25]={};
+int visited[25][25]={};
+vector<int> cntVec;
+ 
 
-	return 0;
+int dr[4] = {-1,0,1,0};
+int dc[4] = {0,1,0,-1};
+int N;
+int cnt;
+ 
+void dfs(int r, int c)
+{
+    for(int i = 0; i<4; i++)
+	{
+        int nr = r + dr[i];
+        int nc = c + dc[i];
+        if(nr>=N || nr<0 || nc>=N || nc<0) continue;
+        if(visited[nr][nc] == 0 && maps[nr][nc]==1)
+		{   
+            visited[nr][nc] = 1;                    //방문했다고 표시하고
+            cnt+=1;                                 //집 개수 세기
+            dfs(nr,nc);
+        }
+    }
+}
+ 
+int main()
+{
+    int res=0;
+    cin >> N;
+    string str;
+    for(int i = 0; i<N; i++){
+        cin >> str;
+        for(int j = 0; j<str.length(); j++)
+		{            
+            visited[i][j] = 0;
+            if(str[j] == '1')
+			{
+                maps[i][j] = 1;
+            }
+            else maps[i][j] = 0;
+        }
+    }
+    
+    for(int i = 0; i<N; i++)
+	{
+        for(int j = 0; j<N; j++)
+		{
+            if(maps[i][j]==1 && visited[i][j]==0)
+			{
+                visited[i][j] = 1;
+                cnt = 1;                        
+                dfs(i,j);
+                cntVec.push_back(cnt);
+                res++;                        
+            }
+        }
+    }
+    sort(cntVec.begin(), cntVec.end());
+    cout << res << "\n";
+    
+    for(int i = 0; i<cntVec.size(); i++)
+	{
+        cout << cntVec[i] << "\n";
+    }
+ 
+    return 0;
 }
