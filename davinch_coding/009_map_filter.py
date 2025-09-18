@@ -16,6 +16,7 @@ def show_menu():
     print("3. show max output")
     print("4. sorted view")
     print("5. dollarization")
+    print("6. 입력금액이상만 보기")
     print("0. exit")
 
 def get_max_money():
@@ -30,7 +31,9 @@ def show_dollar():
     dollar = map(lambda m: [m[0], m[1]*won_to_dollar], money)
     show_money(dollar)
 
-print(*filter(lambda m : m[1]>=500, money))
+def show_after_filter():
+    val = int(input("How much?"))
+    print(*filter(lambda m : m[1]>=val, money))
 ans=1
 while ans:
     show_menu()
@@ -45,4 +48,6 @@ while ans:
         sorted_money()
     elif ans == 5:
         show_dollar()
+    elif ans == 6:
+        show_after_filter()
 
